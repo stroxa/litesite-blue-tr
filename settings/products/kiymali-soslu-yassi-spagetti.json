@@ -1,0 +1,24 @@
+{
+  "id": "m7",
+  "name": "Kıymalı Soslu Yassı Spagetti",
+  "url": "kiymali-soslu-yassi-spagetti",
+  "images": ["kiymali-soslu-yassi-spagetti.webp"],
+  "price": 485,
+  "weight": { "value": 380, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Klasik İtalyan bolonez sosundan ilham alan kıymalı yassı spagetti, özel domates sosu ve dana kıymasıyla hazırlanır. Zengin ve doyurucu bu makarna tüm ailenin favorisi. Et severlerin vazgeçilmez tercihi.",
+  "metaDesc": "Özel domates soslu kıyma ile hazırlanan yassı spagetti.",
+  "keywords": "kıymalı makarna, bolonez makarna, soslu makarna, domates soslu, klasik makarna",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Taze dana kıyma kullanılır.",
+    "Özel domates sosu ile hazırlanır.",
+    "Kıyma soğan ile kavrulur.",
+    "Domates sosu eklenerek pişirilir.",
+    "Makarna ile birleştirilerek servis edilir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "380 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "8", "bestRating": "5", "worstRating": "1" }
+}

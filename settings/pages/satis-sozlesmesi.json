@@ -1,0 +1,128 @@
+{
+  "title": "Mesafeli Satış Sözleşmesi | Makarnacı",
+  "description": "Makarnacı mesafeli satış sözleşmesi. Alışverişiniz sırasında haklarınızı ve sorumluluklarımızı açıklayan yasal belge.",
+  "keywords": "mesafeli satış sözleşmesi, makarnacı yasal bilgiler, tüketici hakları",
+  "showOnFooter": true,
+  "partials": ["article-header", "parts", "article-footer"],
+  "parts": [
+    {
+      "title": "1. Taraflar",
+      "content": [
+        "İşbu Mesafeli Satış Sözleşmesi (\"Sözleşme\"), aşağıdaki SATICI ile makarnaci.com sitesi üzerinden sipariş veren ALICI arasında, 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve ilgili yönetmelikler çerçevesinde kurulmuştur."
+      ],
+      "list": [
+        "Satıcı Unvanı: Makarnacı Gıda ve Yemek Hizmetleri",
+        "Adres: Adres Satırı 1, İlçe İstanbul",
+        "Telefon: +90 212 000 00 00",
+        "E-posta: siparis@makarnaci.com"
+      ]
+    },
+    {
+      "title": "",
+      "content": [
+        "Alıcı: makarnaci.com üzerinden \"WhatsApp ile Sipariş Ver\" butonunu kullanarak sipariş ileten tüketici."
+      ]
+    },
+    {
+      "title": "2. Tanımlar",
+      "list": [
+        "KANUN: 6502 sayılı Tüketicinin Korunması Hakkında Kanun",
+        "YÖNETMELİK: Mesafeli Sözleşmelere Dair Yönetmelik",
+        "ÜRÜN: makarnaci.com üzerinden satışı yapılan gıda ürünleri",
+        "SATICI: Yukarıda bilgileri yer alan şirket",
+        "ALICI: Ürünü satın alan gerçek veya tüzel kişi"
+      ]
+    },
+    {
+      "title": "3. Sözleşmenin Konusu",
+      "content": [
+        "Bu Sözleşme; ALICI'nın makarnaci.com internet sitesi üzerinden WhatsApp hattı aracılığıyla verdiği siparişlere ilişkin satış, teslimat, ödeme ve cayma koşullarını düzenler."
+      ]
+    },
+    {
+      "title": "4. Ürün Bilgileri",
+      "content": [
+        "Siparişe konu ürün/ürünlerin türü, miktarı ve fiyatı sipariş sırasında web sitesinde ve/veya WhatsApp üzerinden ALICI'ya açıkça bildirilir.",
+        "Tüm fiyatlar KDV dahil olup, sipariş onayından önce ALICI tarafından görüntülenmiş ve onaylanmıştır."
+      ]
+    },
+    {
+      "title": "5. Sipariş ve Sözleşmenin Kurulması",
+      "content": [
+        "ALICI, makarnaci.com üzerindeki \"WhatsApp ile Sipariş Ver\" butonuna basarak SATICI'nın WhatsApp hattına yönlendirilir.",
+        "SATICI, siparişi mesaj yoluyla teyit ettiğinde sözleşme kurulmuş sayılır."
+      ]
+    },
+    {
+      "title": "6. Fiyat ve Ödeme",
+      "content": [
+        "Ödeme, aşağıdaki yöntemlerden biriyle yapılır:"
+      ],
+      "list": [
+        "Kapıda ödeme: Teslimat anında nakit veya kartla",
+        "Banka havalesi/EFT: Sipariş onayından sonra SATICI tarafından bildirilen IBAN'a"
+      ]
+    },
+    {
+      "title": "7. Teslimat",
+      "content": [
+        "Siparişler, ALICI'nın bildirdiği adrese en geç 30 gün içinde teslim edilir.",
+        "Teslimat, kendi kuryemiz veya anlaşmalı kargo firması aracılığıyla gerçekleştirilir.",
+        "Kargo/teslimat ücreti, varsa sipariş sırasında ALICI'ya bildirilir."
+      ]
+    },
+    {
+      "title": "8. Cayma Hakkı",
+      "content": [
+        "ALICI, teslimden itibaren 14 gün içinde cayma hakkını kullanabilir.",
+        "Cayma bildirimi yazılı olarak (e-posta veya WhatsApp) SATICI'ya iletilmelidir.",
+        "Gıda niteliği taşıyan ürünlerde aşağıdaki koşullar saklıdır."
+      ]
+    },
+    {
+      "title": "9. Cayma Hakkının Kullanılamayacağı Ürünler",
+      "content": [
+        "6502 sayılı Kanun'un 15. maddesi gereği aşağıdaki ürünlerde cayma hakkı kullanılamaz:"
+      ],
+      "list": [
+        "Günlük taze hazırlanan ve çabuk bozulan gıda ürünleri (taze paça çorbası vb.)",
+        "Ambalajı açılmış, hijyen ve sağlık açısından iade edilmesi uygun olmayan ürünler",
+        "Soğuk zincir bozulmuş dondurulmuş ürünler"
+      ]
+    },
+    {
+      "title": "10. Dondurulmuş Ürünlerde İade",
+      "content": [
+        "Dondurulmuş ürünlerde, orijinal ambalajı açılmamış ve soğuk zinciri korunmuş olması koşuluyla teslimden itibaren 14 gün içinde iade talep edilebilir.",
+        "İade kargo ücreti ALICI'ya aittir."
+      ]
+    },
+    {
+      "title": "11. Genel Hükümler",
+      "list": [
+        "ALICI, sipariş vermeden önce ürün bilgileri, fiyat ve teslimat koşulları hakkında önceden bilgilendirilmiştir.",
+        "Ödeme yapılmaz veya havale teyit edilmezse SATICI'nın teslimat yükümlülüğü başlamaz.",
+        "SATICI, stok veya tedarik yetersizliği durumunda siparişi iptal edebilir; bu durumda ALICI bilgilendirilir."
+      ]
+    },
+    {
+      "title": "12. Kişisel Verilerin Korunması",
+      "content": [
+        "Sipariş sırasında iletilen ad, adres, telefon gibi kişisel veriler yalnızca teslimat ve iletişim amacıyla kullanılır.",
+        "Detaylı bilgi için Gizlilik Politikamızı ve KVKK Aydınlatma Metnimizi inceleyebilirsiniz."
+      ]
+    },
+    {
+      "title": "13. Uyuşmazlık ve Yetkili Merciler",
+      "content": [
+        "Bu Sözleşme'den doğan uyuşmazlıklarda ALICI'nın yerleşim yerindeki Tüketici Hakem Heyetleri veya Tüketici Mahkemeleri yetkilidir."
+      ]
+    },
+    {
+      "title": "14. Yürürlük",
+      "content": [
+        "ALICI, makarnaci.com üzerinden verdiği sipariş ile bu Sözleşme'nin tüm koşullarını okuduğunu, anladığını ve kabul ettiğini beyan eder."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "m10",
+  "name": "Köri Tavuklu Yassı Spagetti",
+  "url": "kori-tavuklu-yassi-spagetti",
+  "images": ["kori-tavuklu-yassi-spagetti.webp"],
+  "price": 335,
+  "weight": { "value": 350, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Uzak Doğu'nun egzotik köri baharatı ile marine edilmiş ızgara tavuk, yassı spagetiyle buluşur. Köri'nin sıcak notaları tavuğun yumuşak dokusuyla uyum yakalar. Fusion mutfağın en güzel örneklerinden biri.",
+  "metaDesc": "Köri baharatı ile lezzetlendirilmiş ızgara tavuk eşliğinde yassı spagetti.",
+  "keywords": "körili makarna, tavuklu makarna, soslu makarna, yassı makarna, baharatlı makarna",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Köri baharatı ile marine tavuk eklenir.",
+    "Egzotik ve aromatik bir lezzet sunar.",
+    "Tavuk köri ile marine edilir.",
+    "Izgarada pişirilir ve dilimlenir.",
+    "Makarna ile birleştirilerek servis edilir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "350 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "3", "bestRating": "5", "worstRating": "1" }
+}

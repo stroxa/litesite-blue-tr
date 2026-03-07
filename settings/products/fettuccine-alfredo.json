@@ -1,0 +1,24 @@
+{
+  "id": "m1",
+  "name": "Fettuccine Alfredo",
+  "url": "fettuccine-alfredo",
+  "images": ["fettuccine-alfredo.webp"],
+  "price": 415,
+  "weight": { "value": 350, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Klasik İtalyan mutfağının vazgeçilmezi, zengin krema sosu ile taze mantar ve tavuk parçaları içerir. Al dente pişirilen fettuccine kremsi sosla harmanlanır. Enfes bir tat deneyimi sunar.",
+  "metaDesc": "Krema sosu, mantar ve tavuk ile hazırlanan klasik İtalyan lezzeti.",
+  "keywords": "fettuccine alfredo, kremalı makarna, tavuklu makarna, mantarlı makarna, İtalyan makarna",
+  "longDesc": [
+    "Fettuccine makarna kullanılır.",
+    "Zengin krema sosu ile hazırlanır.",
+    "Taze mantar ve tavuk parçaları eklenir.",
+    "Makarna tuzlu suda pişirilir.",
+    "Tavuk ve mantarlar ayrı sotelenir.",
+    "Krema sosu ile birleştirilir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "350 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "4", "bestRating": "5", "worstRating": "1" }
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Makarnacı | Taze Malzemeler, Özel Soslar",
+  "description": "Makarnacı, taze malzemeler ve özel soslarla hazırlanan ev yapımı makarna çeşitlerini kapınıza kadar ulaştırıyor.",
+  "keywords": "makarnacı, ev yapımı makarna, kremalı makarna, yassı spagetti, fettuccine, İtalyan makarna",
+  "priority": 1.0,
+  "partials": ["hero:headerHero", "product-cards"]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "m2",
+  "name": "Kremalı Mantarlı Yassı Spagetti",
+  "url": "kremali-mantarli-yassi-spagetti",
+  "images": ["kremali-mantarli-yassi-spagetti.webp"],
+  "price": 325,
+  "weight": { "value": 320, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Zengin kremalı sosumuz taze mantarlarla buluşarak yassı spagettiye eşsiz lezzet katar. Kremanın yumuşaklığı mantarın toprak aromasıyla uyum yakalar. Vejetaryen dostları için ideal bir seçenek.",
+  "metaDesc": "Yoğun kremalı sos ve mantar ile hazırlanan yassı spagetti.",
+  "keywords": "kremalı makarna, mantarlı makarna, yassı spagetti, soslu makarna, İtalyan makarna",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Yoğun krema sosu ile hazırlanır.",
+    "Taze mantar eklenir.",
+    "Makarna suda haşlanır.",
+    "Mantarlar tereyağında kavrulur.",
+    "Krema sosu eklenerek birleştirilir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "320 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "6", "bestRating": "5", "worstRating": "1" }
+}

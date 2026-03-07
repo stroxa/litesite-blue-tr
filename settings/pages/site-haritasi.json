@@ -1,0 +1,8 @@
+{
+  "title": "Site Haritası | Makarnacı",
+  "description": "Makarnacı web sitesinin tüm sayfalarını ve menü öğelerini listeleyen site haritası.",
+  "keywords": "makarnacı site haritası",
+  "showOnFooter": true,
+  "isSiteMap": true,
+  "partials": ["article-header", "sitemap-list", "article-footer"]
+}

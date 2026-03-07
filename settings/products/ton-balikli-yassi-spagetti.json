@@ -1,0 +1,24 @@
+{
+  "id": "m9",
+  "name": "Ton Balıklı Yassı Spagetti",
+  "url": "ton-balikli-yassi-spagetti",
+  "images": ["ton-balikli-yassi-spagetti.webp"],
+  "price": 385,
+  "weight": { "value": 350, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Akdeniz mutfağından ilham alan ton balıklı yassı spagetti, kaliteli ton balığı ve özel domates sosuyla hazırlanır. Hafif ve sağlıklı bir seçenek arayanlar için mükemmel. Omega-3 açısından zengin besleyici bir öğün.",
+  "metaDesc": "Domates sosu ve ton balığı ile hazırlanan yassı spagetti.",
+  "keywords": "ton balıklı makarna, balıklı makarna, deniz ürünlü, soslu makarna, yassı makarna",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Kaliteli ton balığı kullanılır.",
+    "Özel domates sosu ile hazırlanır.",
+    "Makarna suda haşlanır.",
+    "Ton balığı ve domates sosu ile harmanlanır.",
+    "Sıcak servis edilir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "350 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "4", "bestRating": "5", "worstRating": "1" }
+}

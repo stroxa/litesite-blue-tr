@@ -1,0 +1,32 @@
+{
+  "name": "Makarnacı",
+  "legalName": "Makarnacı Gıda ve Yemek Hizmetleri",
+  "address": [
+    "Adres Satırı 1",
+    "İlçe İstanbul"
+  ],
+  "map": "#",
+  "phone": "+90 212 000 00 00",
+  "email": "siparis@makarnaci.com",
+  "instagram": "#",
+  "facebook": "#",
+  "linkedin": "#",
+  "whatsapp": "+90 532 000 00 00",
+  "slogan": "Taze malzemeler, ustalıkla hazırlanmış makarnalar.",
+  "description": "Makarnacı, taze malzemeler ve özel soslarla hazırlanan ev yapımı makarnaları ve içecekleri sizinle buluşturuyor.",
+
+  "currency": "TRY",
+  "currencySymbol": "₺",
+  "priceValidUntilDays": 30,
+
+  "brand": "Makarnacı",
+
+  "manufacturer": {
+    "name": "Makarnacı Gıda ve Yemek Hizmetleri",
+    "identifier": "TR34-0001",
+    "phone": "+902120000000",
+    "address": "Adres Satırı 1",
+    "city": "İstanbul",
+    "country": "TR"
+  }
+}

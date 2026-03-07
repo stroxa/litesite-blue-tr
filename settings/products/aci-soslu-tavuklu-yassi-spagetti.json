@@ -1,0 +1,24 @@
+{
+  "id": "m6",
+  "name": "Acı Soslu Tavuklu Yassı Spagetti",
+  "url": "aci-soslu-tavuklu-yassi-spagetti",
+  "images": ["aci-soslu-tavuklu-yassi-spagetti.webp"],
+  "price": 395,
+  "weight": { "value": 360, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Acı sevenler için hazırlanan bu yassı spagetti, ızgara tavuk ve özel acı sosumuzun birleşimidir. Baharatların ateşli dansı tavuğun lezzetiyle bütünleşir. Doyurucu ve unutulmaz bir lezzet deneyimi sunar.",
+  "metaDesc": "Izgara tavuk ve acı sos ile lezzetlendirilmiş yassı spagetti.",
+  "keywords": "acılı makarna, tavuklu makarna, baharatlı makarna, hot sos, ateşli makarna",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Izgara tavuk parçaları eklenir.",
+    "Özel acı sos ile hazırlanır.",
+    "Tavuk ızgarada pişirilir.",
+    "Makarna suda haşlanır.",
+    "Acı sos ile harmanlanır."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "360 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "4", "bestRating": "5", "worstRating": "1" }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "m5",
+  "name": "Barbekü Soslu Tavuklu Yassı Spagetti",
+  "url": "barbeku-soslu-tavuklu-yassi-spagetti",
+  "images": ["barbeku-soslu-tavuklu-yassi-spagetti.webp"],
+  "price": 395,
+  "weight": { "value": 360, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Barbekü sosunun tatlımsı aroması ızgara tavuk parçalarıyla buluşur. Yassı spagetti ile birleşerek farklı bir makarna deneyimi sunar. Amerikan mutfağından ilham alınan lezzet.",
+  "metaDesc": "Izgara tavuk ve barbekü sosunun mükemmel uyumu ile hazırlanan yassı spagetti.",
+  "keywords": "barbekü makarna, tavuklu makarna, BBQ makarna, soslu makarna, yassı makarna",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Izgara tavuk parçaları eklenir.",
+    "Barbekü sosu ile hazırlanır.",
+    "Tavuk ızgarada pişirilir ve dilimlenir.",
+    "Makarna suda haşlanır.",
+    "Barbekü sosu ile birleştirilir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "360 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "5", "bestRating": "5", "worstRating": "1" }
+}

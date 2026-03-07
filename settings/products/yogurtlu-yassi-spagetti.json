@@ -1,0 +1,25 @@
+{
+  "id": "m4",
+  "name": "Yoğurtlu Yassı Spagetti",
+  "url": "yogurtlu-yassi-spagetti",
+  "images": ["yogurtlu-yassi-spagetti.webp"],
+  "price": 185,
+  "weight": { "value": 300, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Türk mutfağının sevilen lezzeti, kremsi yoğurt sosu ile yassı spagettinin buluşmasıdır. İsteğe bağlı sarımsaklı tereyağı ile zenginleştirilebilir. Hafif, ferahlatıcı ve doyurucu bir öğün seçeneği.",
+  "metaDesc": "Yoğurt sosu ile hazırlanır, isteğe bağlı sarımsaklı servis edilir.",
+  "keywords": "yoğurtlu makarna, soslu makarna, sarımsaklı makarna, geleneksel makarna, ev yapımı",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Taze yoğurt sosu ile hazırlanır.",
+    "İsteğe bağlı sarımsak eklenebilir.",
+    "Geleneksel Türk lezzeti sunar.",
+    "Makarna suda haşlanır.",
+    "Yoğurt sosu hazırlanır.",
+    "İsteğe göre sarımsaklı tereyağı eklenir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "300 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "7", "bestRating": "5", "worstRating": "1" }
+}

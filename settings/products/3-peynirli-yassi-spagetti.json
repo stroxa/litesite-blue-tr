@@ -1,0 +1,24 @@
+{
+  "id": "m8",
+  "name": "3 Peynirli Yassı Spagetti",
+  "url": "3-peynirli-yassi-spagetti",
+  "images": ["3-peynirli-yassi-spagetti.webp"],
+  "price": 329,
+  "weight": { "value": 340, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Peynir tutkunları için hazırlanan bu yassı spagetti üç farklı peynirin buluşmasıdır. Mozzarellanın uzayan dokusu, cheddarın yoğunluğu ve kaşarın kremsi tadı bir arada. Peynir severler için vazgeçilmez bir tercih.",
+  "metaDesc": "Mozzarella, cheddar ve kaşar peynirinin eşsiz uyumu ile hazırlanan yassı spagetti.",
+  "keywords": "peynirli makarna, soslu makarna, mozzarella makarna, cheddar makarna, kaşarlı makarna",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Mozzarella, cheddar ve kaşar peyniri içerir.",
+    "Zengin peynir aroması sunar.",
+    "Makarna suda haşlanır.",
+    "Üç peynir eritilerek karıştırılır.",
+    "Sıcak servis edilir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "340 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "5", "bestRating": "5", "worstRating": "1" }
+}

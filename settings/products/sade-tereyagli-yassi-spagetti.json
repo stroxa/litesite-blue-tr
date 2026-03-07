@@ -1,0 +1,24 @@
+{
+  "id": "m3",
+  "name": "Sade Tereyağlı Yassı Spagetti",
+  "url": "sade-tereyagli-yassi-spagetti",
+  "images": ["sade-tereyagli-yassi-spagetti.webp"],
+  "price": 210,
+  "weight": { "value": 280, "unit": "g" },
+  "category": { "name": "Makarnalar", "url": "makarnalar" },
+  "shortDesc": "Sadeliğin güzelliğini yansıtan tereyağlı yassı spagetti, kaliteli tereyağının zengin aromasıyla hazırlanır. Al dente pişirilen makarna tereyağı ile harmanlanır. Özellikle çocukların favorisi olan hafif bir seçenek.",
+  "metaDesc": "Tereyağı ile sade ve hafif bir lezzet sunan yassı spagetti.",
+  "keywords": "tereyağlı makarna, sade makarna, yassı spagetti, hafif makarna, sossuz makarna",
+  "longDesc": [
+    "Yassı spagetti makarna kullanılır.",
+    "Tereyağı ile hazırlanır.",
+    "Sade ve hafif bir lezzet sunar.",
+    "Makarna suda haşlanır.",
+    "Sıcak tereyağı ile karıştırılır.",
+    "Sıcak servis edilir."
+  ],
+  "otherDesc": [
+    { "name": "Net Miktar", "value": "280 g", "type": "spec" }
+  ],
+  "aggregateRating": { "ratingValue": "5", "reviewCount": "5", "bestRating": "5", "worstRating": "1" }
+}
