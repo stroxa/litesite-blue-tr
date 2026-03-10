@@ -1,3 +1,50 @@
+details {
+  margin: 1.5rem 0 0;
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: var(--white);
+  border-bottom: 2px solid var(--border-dark);
+  border-radius: var(--r-md) var(--r-md) 0 0;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--text);
+  user-select: none;
+  width: 100%;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: '+';
+  margin-right: 0.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+details[open] > summary::before {
+  content: '−';
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+
 /* ── Product grid (all-products page) ──────────── */
 ul.prd {
   display: grid;

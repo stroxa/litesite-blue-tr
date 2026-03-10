@@ -39,7 +39,7 @@ document.querySelectorAll(".off").forEach(function(el) {
 el.style.visibility = "hidden";
 });
 });
-var _nav = document.querySelector("nav");
+let _nav = document.querySelector("nav");
 if (_nav) { _nav.addEventListener("click", function(e) {
 if (e.target === this) { this.classList.toggle("open"); }
 }); }
@@ -85,7 +85,7 @@ parent.append(parts[i]);
 }
 }
 function fmt(n) { return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
-function empty(el) { while (el.firstChild) { el.removeChild(el.firstChild); } }
+function empty(el) { el.replaceChildren(); }
 function actionImg(src, title, action, id, cls) {
 let e = img(src, title, cls);
 e.setAttribute("data-action", action);
@@ -93,7 +93,7 @@ e.setAttribute("data-id", id);
 return e;
 }
 let PRODUCTS={"m8":{"name":"3 Peynirli Yassı Spagetti","price":329,"weight":340,"img":"3-peynirli-yassi-spagetti.webp"},"m6":{"name":"Acı Soslu Tavuklu Yassı Spagetti","price":395,"weight":360,"img":"aci-soslu-tavuklu-yassi-spagetti.webp"},"m5":{"name":"Barbekü Soslu Tavuklu Yassı Spagetti","price":395,"weight":360,"img":"barbeku-soslu-tavuklu-yassi-spagetti.webp"},"m1":{"name":"Fettuccine Alfredo","price":415,"weight":350,"img":"fettuccine-alfredo.webp"},"m7":{"name":"Kıymalı Soslu Yassı Spagetti","price":485,"weight":380,"img":"kiymali-soslu-yassi-spagetti.webp"},"m10":{"name":"Köri Tavuklu Yassı Spagetti","price":335,"weight":350,"img":"kori-tavuklu-yassi-spagetti.webp"},"m2":{"name":"Kremalı Mantarlı Yassı Spagetti","price":325,"weight":320,"img":"kremali-mantarli-yassi-spagetti.webp"},"m3":{"name":"Sade Tereyağlı Yassı Spagetti","price":210,"weight":280,"img":"sade-tereyagli-yassi-spagetti.webp"},"m9":{"name":"Ton Balıklı Yassı Spagetti","price":385,"weight":350,"img":"ton-balikli-yassi-spagetti.webp"},"m4":{"name":"Yoğurtlu Yassı Spagetti","price":185,"weight":300,"img":"yogurtlu-yassi-spagetti.webp"}};
-let BASKET_CONFIG={"warning":"Ürünlerinizi sepete ekledikten sonra,<br/>'WhatsApp'tan Siparişini İlet' butonuna tıklayarak<br/>siparişinizi ve adres bilgilerinizi tarafımıza iletebilir,<br/>alışverişinizi kolayca tamamlayabilirsiniz.","waWarning":"WhatsApp kullanmıyorsanız,<br/>sipariş ve sorularınız için bize siparis@makarnaci.com adresimizden ulaşabilirsiniz.","shippingWarning":"Yakın çevredeki siparişlerde teslimat ücretsizdir.","currency":"₺","waNumber":"902120000000","productsPage":"/pages/urunlerimiz.html","labels":{"addToBasket":"Sepete Ekle","basket":"Sepet","myBasket":"Sepetim","itemSuffix":"ürün","for":"için","openBasket":"Sepeti Aç","closeBasket":"Sepeti Kapat","subtotal":"Ara Toplam","shipping":"Teslimat","freeShipping":"Ücretsiz","total":"Toplam","delete":"Sil","unit":"Adet","whatsAppOrder":"WhatsApp'tan Siparişini İlet","whatsAppGreeting":"Merhaba, sipariş vermek istiyorum:","emptyBasket":"Sepetinizde henüz ürün yok","productsLinkText":"Menümüz","emptyBasketDesc":"sayfasını ziyaret ederek beğendiğiniz ürünleri sepetinize ekleyebilirsiniz."}};
+let BASKET_CONFIG={"warning":"Ürünlerinizi sepete ekledikten sonra,<br/>'WhatsApp'tan Siparişini İlet' butonuna tıklayarak<br/>siparişinizi ve adres bilgilerinizi tarafımıza iletebilir,<br/>alışverişinizi kolayca tamamlayabilirsiniz.","waWarning":"WhatsApp kullanmıyorsanız,<br/>sipariş ve sorularınız için bize siparis@makarnaci.com adresimizden ulaşabilirsiniz.","shippingWarning":"Yakın çevredeki siparişlerde teslimat ücretsizdir.","currency":"₺","waNumber":"902120000000","tgUsername":"makarnaci","productsPage":"/pages/urunlerimiz.html","labels":{"addToBasket":"Sepete Ekle","basket":"Sepet","myBasket":"Sepetim","itemSuffix":"ürün","for":"için","openBasket":"Sepeti Aç","closeBasket":"Sepeti Kapat","subtotal":"Ara Toplam","shipping":"Teslimat","freeShipping":"Ücretsiz","total":"Toplam","delete":"Sil","unit":"Adet","whatsAppOrder":"WhatsApp'tan Siparişini İlet","whatsAppGreeting":"Merhaba, sipariş vermek istiyorum:","telegramOrder":"Telegram'dan Siparişini İlet","telegramGreeting":"Merhaba, sipariş vermek istiyorum:","emptyBasket":"Sepetinizde henüz ürün yok","productsLinkText":"Menümüz","emptyBasketDesc":"sayfasını ziyaret ederek beğendiğiniz ürünleri sepetinize ekleyebilirsiniz."}};
 (function() {
 let basketSection = document.getElementById("basket");
 if (!basketSection) { return; }
@@ -103,13 +103,15 @@ let waWarningText = C.waWarning || "";
 let shippingWarningText = C.shippingWarning || "";
 let currencySymbol = C.currency || "\u20BA";
 let waNumber = C.waNumber || "";
+let tgUsername = C.tgUsername || "";
 let labels = C.labels || {};
 let L = function(k) { return labels[k]; };
 let addToBasketText = L("addToBasket");
 let badge;
 let basketOpen = false;
-let navEl;
 let emptyEl, descEl, wrapEl, toggleBtnEl, toggleInfoEl, contentEl, itemsEl, totalsEl;
+let lastItems, lastSubtotal, lastShipping, lastTotal;
+let cachedLinks;
 function getCart() {
 let params = new URLSearchParams(location.search);
 let cart = {};
@@ -136,14 +138,14 @@ let url = location.pathname + (qs ? "?" + qs : "") + location.hash;
 history.replaceState(null, "", url);
 render();
 }
-function getTotalQty() {
-let cart = getCart();
+function getTotalQty(cart) {
+if (!cart) { cart = getCart(); }
 let total = 0;
 for (let id in cart) total += cart[id];
 return total;
 }
-function getItems() {
-let cart = getCart();
+function getItems(cart) {
+if (!cart) { cart = getCart(); }
 let items = [];
 for (let id in cart) {
 let prod = PRODUCTS[id];
@@ -175,13 +177,13 @@ delete cart[id];
 setCart(cart);
 }
 function render() {
-renderButtons();
-renderBadge();
-renderBasket();
+let cart = getCart();
+renderButtons(cart);
+renderBadge(cart);
+renderBasket(cart);
 updateLinks();
 }
-function renderButtons() {
-let cart = getCart();
+function renderButtons(cart) {
 let buttons = document.querySelectorAll("button[data-id]");
 for (let i = 0; i < buttons.length; i++) {
 let btn = buttons[i];
@@ -214,13 +216,12 @@ basketSection.scrollIntoView({ behavior: "smooth" });
 });
 document.querySelector("header").append(badge);
 }
-function renderBadge() {
-let total = getTotalQty();
+function renderBadge(cart) {
+let total = getTotalQty(cart);
 badge.querySelector("span").textContent = total;
 if (total > 0) { show(badge); }
 else { hide(badge); }
 }
-function updateBadgePosition() {}
 function initBasketDOM() {
 emptyEl = div("empty hidden");
 emptyEl.append(img("/img/basket.png", L("basket")), txt(p, L("emptyBasket")));
@@ -239,7 +240,6 @@ basketOpen = !basketOpen;
 if (basketOpen) { show(contentEl); }
 else { hide(contentEl); }
 toggleBtnEl.classList.toggle("open", basketOpen);
-updateBadgePosition();
 });
 wrapEl.append(toggleBtnEl);
 contentEl = div("hidden");
@@ -248,14 +248,16 @@ totalsEl = div("totals");
 contentEl.append(itemsEl, totalsEl);
 let waBtn = txt(button, L("whatsAppOrder"), "wa");
 waBtn.addEventListener("click", function() {
-let items = getItems();
-let subtotal = 0;
-for (let i = 0; i < items.length; i++) subtotal += items[i].price * items[i].quantity;
-let shipping = calculateShippingPrice(items);
-let total = subtotal + shipping;
-sendWhatsApp(items, subtotal, shipping, total);
+if (lastItems) { sendWhatsApp(lastItems, lastSubtotal, lastShipping, lastTotal); }
 });
 contentEl.append(waBtn);
+if (tgUsername) {
+let tgBtn = txt(button, L("telegramOrder"), "tg");
+tgBtn.addEventListener("click", function() {
+if (lastItems) { sendTelegram(lastItems, lastSubtotal, lastShipping, lastTotal); }
+});
+contentEl.append(tgBtn);
+}
 if (waWarningText) {
 let warn = h6();
 parseBr(waWarningText, warn);
@@ -264,8 +266,8 @@ contentEl.append(warn);
 wrapEl.append(contentEl);
 basketSection.append(wrapEl);
 }
-function renderBasket() {
-let items = getItems();
+function renderBasket(cart) {
+let items = getItems(cart);
 if (items.length === 0) {
 show(emptyEl);
 if (descEl) { hide(descEl); }
@@ -273,7 +275,6 @@ hide(wrapEl);
 basketOpen = false;
 hide(contentEl);
 toggleBtnEl.classList.remove("open");
-updateBadgePosition();
 return;
 }
 hide(emptyEl);
@@ -283,11 +284,12 @@ if (basketOpen) { show(contentEl); }
 else { hide(contentEl); }
 toggleBtnEl.classList.toggle("open", basketOpen);
 empty(itemsEl);
-let subtotal = 0;
+let subtotal = 0, totalQty = 0;
 for (let i = 0; i < items.length; i++) {
 let item = items[i];
 let lineTotal = item.price * item.quantity;
 subtotal += lineTotal;
+totalQty += item.quantity;
 let row = div();
 let del = actionImg("/img/delete.png", L("delete"), "delete", item.id, "del");
 let qc = div("qty-ctrl");
@@ -297,47 +299,58 @@ qc.append(qMinus, txt(span, item.quantity), qPlus);
 row.append(del, img("/img/products/" + item.img, item.name), txt(b, item.name), qc, txt(span, fmt(lineTotal) + " " + currencySymbol));
 itemsEl.append(row);
 }
-let totalQty = 0;
-for (let q = 0; q < items.length; q++) { totalQty += items[q].quantity; }
 toggleInfoEl.textContent = "(" + totalQty + " " + L("itemSuffix") + " " + L("for") + " " + L("total") + " " + fmt(subtotal) + " " + currencySymbol + ")";
 empty(totalsEl);
 let shipping = calculateShippingPrice(items);
 let total = subtotal + shipping;
+lastItems = items;
+lastSubtotal = subtotal;
+lastShipping = shipping;
+lastTotal = total;
 totalsEl.append(makeRow(L("subtotal") + ":", fmt(subtotal) + " " + currencySymbol));
 totalsEl.append(makeRow(L("shipping") + ":", shipping > 0 ? fmt(shipping) + " " + currencySymbol : L("freeShipping")));
 if (shippingWarningText) {
 totalsEl.append(txt(small, shippingWarningText));
 }
 totalsEl.append(makeRow(L("total") + ":", fmt(total) + " " + currencySymbol, "total"));
-updateBadgePosition();
 }
 function updateLinks() {
 let qs = location.search;
-let links = document.querySelectorAll("a[href]");
-for (let i = 0; i < links.length; i++) {
-let link = links[i];
-let href = link.getAttribute("href");
-if (!href) { continue; }
-if (href.charAt(0) === "#") { continue; }
-if (href.indexOf("://") !== -1) { continue; }
-if (href.indexOf("mailto:") === 0) { continue; }
-if (href.indexOf("tel:") === 0) { continue; }
+if (!cachedLinks) {
+let all = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"]');
+cachedLinks = [];
+for (let i = 0; i < all.length; i++) {
+let href = all[i].getAttribute("href");
 let hashPos = href.indexOf("#");
-let hash = hashPos !== -1 ? href.substring(hashPos) : "";
-let base = hashPos !== -1 ? href.substring(0, hashPos) : href;
-base = base.split("?")[0];
-link.setAttribute("href", base + qs + hash);
+cachedLinks.push({
+el: all[i],
+base: (hashPos !== -1 ? href.substring(0, hashPos) : href).split("?")[0],
+hash: hashPos !== -1 ? href.substring(hashPos) : ""
+});
 }
 }
-function sendWhatsApp(items, subtotal, shipping, total) {
-let msg = L("whatsAppGreeting") + "\n";
+for (let i = 0; i < cachedLinks.length; i++) {
+let l = cachedLinks[i];
+l.el.setAttribute("href", l.base + qs + l.hash);
+}
+}
+function buildOrderMessage(items, subtotal, shipping, total, greetingKey) {
+let msg = L(greetingKey) + "\n";
 for (let i = 0; i < items.length; i++) {
 msg += items[i].quantity + "x " + items[i].name + " - " + fmt(items[i].price * items[i].quantity) + " " + currencySymbol + "\n";
 }
 msg += L("subtotal") + ": " + fmt(subtotal) + " " + currencySymbol + "\n";
 msg += L("shipping") + ": " + (shipping > 0 ? fmt(shipping) + " " + currencySymbol : L("freeShipping")) + "\n";
 msg += L("total") + ": " + fmt(total) + " " + currencySymbol;
+return msg;
+}
+function sendWhatsApp(items, subtotal, shipping, total) {
+let msg = buildOrderMessage(items, subtotal, shipping, total, "whatsAppGreeting");
 window.open("https://wa.me/" + waNumber + "?text=" + encodeURIComponent(msg), "_blank");
+}
+function sendTelegram(items, subtotal, shipping, total) {
+let msg = buildOrderMessage(items, subtotal, shipping, total, "telegramGreeting");
+window.open("https://t.me/" + tgUsername + "?text=" + encodeURIComponent(msg), "_blank");
 }
 document.addEventListener("click", function(e) {
 let t = e.target;
@@ -357,12 +370,9 @@ addToBasket(btn.getAttribute("data-id"));
 }
 });
 createBadge();
-navEl = document.querySelector("nav");
 let fb = document.querySelector("button[data-id]");
 if (fb) { addToBasketText = fb.textContent.trim(); }
 initBasketDOM();
 if (getTotalQty() > 0) { basketOpen = true; }
 render();
-window.addEventListener("scroll", updateBadgePosition, { passive: true });
-window.addEventListener("resize", updateBadgePosition, { passive: true });
 })();
